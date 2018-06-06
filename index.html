@@ -10,15 +10,43 @@
 <body>
 <form action="" method="post" class="form">
   <div class="form__head">
-	 <div class="form__title">Lorem ipsum.
-		<div class="form--total">Lorem ipsum.</div>
+      <div class="form__title">Harold Finch
+          <div class="form--total">Your Total</div>
 	 </div>
-	 <div class="form__price">Lorem ipsum dolor</div>
+      <div class="form__price">$123</div>
   </div>
-  <div class="form__body"></div>
+
+    <div class="form__body">
+        <h3>Credit card number</h3>
+        <input type="number" name="number" placeholder="4321">
+        <h3>Expiration date</h3>
+        <!--<input type="month" name="month" placeholder="Month">-->
+        <!--<input type="date" name="date" placeholder="Year">-->
+        <select name="month" id="month">
+            <option value="Month" selected>Month</option>
+            <option value="December">December</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+        </select>
+        <select name="year" id="year">
+            <option value="Year" selected>Year</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+        </select>
+
+        <div class="form__cvv">
+            <h3>CVV</h3>
+            <input class="small" type="number" name="number" placeholder="">
+            <h3 class="text__right">3 or 4 digits - <a href="#">view example</a></h3>
+        </div>
+    </div>
+    <div class="form_footer">
+        <button type="submit">Pay</button>
+        <h3><a href="#">Cancel order</a></h3>
+    </div>
 
 </form>
-
 
 </body>
 </html>
