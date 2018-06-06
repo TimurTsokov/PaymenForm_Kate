@@ -49,16 +49,36 @@ body {
 }
 
 .form__body,
-.form_footer {
+.form__footer {
     padding: 25px;
 }
 
-.form__body input {
-    caret-color: #eecc68;
+.form__body {
+    position: relative;
 }
+
+/*не работает */
+.form__body:after {
+    border-bottom: 1px solid #637570;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    position: absolute;
+}
+
+/*------------------*/
+input.big {
+    caret-color: #eecc68;
+    padding: 10px;
+    font-size: 1.3rem;
+    width: 100%;
+    line-height: 1.5;
+}
+
 .form__title,
 .form__price {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     height: 40px;
 }
 
@@ -86,13 +106,54 @@ body {
     margin: 20px auto 10px;
     font-size: 1.3rem;
     color: #9eabad;
+
 }
 
+#month {
+    float: left;
+    min-width: 60%;
+    font-size: 1.3rem;
+    color: #727f82;
+    padding: 10px;
+}
+
+#year {
+    float: right;
+    min-width: 30%;
+    font-size: 1.3rem;
+    color: #727f82;
+    padding: 10px;
+}
 .form__cvv {
+    /*border-bottom: 1px solid #637570;*/
+    vertical-align: middle;
+    /*padding-bottom: 20px;*/
+}
+
+.form__cvv:before,
+.form__cvv:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+input.small {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    caret-color: #eecc68;
+}
+
+h4.text__right {
+    float: right;
+    min-width: 65%;
+    margin: 10px auto;
+    font-size: 1.3rem;
+    color: #9eabad;
 
 }
 
-.form__cvv > h3 {
+.form__cvv h3 {
     margin: 25px auto 10px;
     font-size: 1.3rem;
     color: #9eabad;
@@ -118,4 +179,9 @@ button[type="submit"]:focus {
     color: #26b167;
     background: #ffffff;
     border: 1px solid #26b167;
+}
+
+.form__footer > h3 {
+    margin: 20px 100px 0;
+    font-size: 1.2rem;
 }
